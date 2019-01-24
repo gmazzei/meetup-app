@@ -33,7 +33,16 @@ class MainViewController: UIViewController {
     }
     
     private func setupViewController() {
+        mainView.image.addTapGestureRecognizer { [unowned self] recognizer in
+            self.mainView.title.text = "New title"
+            self.mainView.message.text = "New message"
+            self.mainView.image.load(from: "https://bit.ly/2CE3Msd")
+        }
         
+        mainView.nextLabel.addTapGestureRecognizer { [unowned self] recognizer in
+            let controller = NewsListViewController(viewModel: NewsListViewModel())
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
 }
 

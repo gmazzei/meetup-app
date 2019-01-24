@@ -10,8 +10,10 @@ import UIKit
 import WolmoCore
 
 class MainView: UIView, NibLoadable {
+    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var nextLabel: UILabel!
+    
 }

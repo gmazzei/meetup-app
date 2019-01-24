@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652F303421FA0BB1005E85FA /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F303321FA0BB1005E85FA /* NewsListViewController.swift */; };
+		652F303621FA0BC5005E85FA /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F303521FA0BC5005E85FA /* NewsListViewModel.swift */; };
+		652F303821FA0BD9005E85FA /* NewsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652F303721FA0BD9005E85FA /* NewsListView.xib */; };
+		652F303A21FA0BE9005E85FA /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F303921FA0BE9005E85FA /* NewsListView.swift */; };
 		656B30F821FA041100591F4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B30F721FA041100591F4C /* AppDelegate.swift */; };
 		656B30FA21FA041100591F4C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B30F921FA041100591F4C /* MainViewController.swift */; };
 		656B30FF21FA041200591F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656B30FE21FA041200591F4C /* Assets.xcassets */; };
@@ -32,6 +36,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		652F303321FA0BB1005E85FA /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		652F303521FA0BC5005E85FA /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
+		652F303721FA0BD9005E85FA /* NewsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListView.xib; sourceTree = "<group>"; };
+		652F303921FA0BE9005E85FA /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		656B30F421FA041100591F4C /* MeetupApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetupApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656B30F721FA041100591F4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		656B30F921FA041100591F4C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +64,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		652F303221FA0B94005E85FA /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				652F303321FA0BB1005E85FA /* NewsListViewController.swift */,
+				652F303521FA0BC5005E85FA /* NewsListViewModel.swift */,
+				652F303721FA0BD9005E85FA /* NewsListView.xib */,
+				652F303921FA0BE9005E85FA /* NewsListView.swift */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
 		656B30EB21FA041100591F4C = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				656B310921FA043E00591F4C /* Main */,
+				652F303221FA0B94005E85FA /* NewsList */,
 				656B311721FA081600591F4C /* Extensions */,
 				656B30F721FA041100591F4C /* AppDelegate.swift */,
 				656B30FE21FA041200591F4C /* Assets.xcassets */,
@@ -172,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				656B30FF21FA041200591F4C /* Assets.xcassets in Resources */,
+				652F303821FA0BD9005E85FA /* NewsListView.xib in Resources */,
 				656B310D21FA047300591F4C /* MainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,8 +205,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				656B30FA21FA041100591F4C /* MainViewController.swift in Sources */,
+				652F303A21FA0BE9005E85FA /* NewsListView.swift in Sources */,
+				652F303621FA0BC5005E85FA /* NewsListViewModel.swift in Sources */,
 				656B310F21FA048300591F4C /* MainView.swift in Sources */,
 				656B30F821FA041100591F4C /* AppDelegate.swift in Sources */,
+				652F303421FA0BB1005E85FA /* NewsListViewController.swift in Sources */,
 				656B310B21FA046700591F4C /* MainViewModel.swift in Sources */,
 				656B311921FA083400591F4C /* UIImageView + load.swift in Sources */,
 			);
