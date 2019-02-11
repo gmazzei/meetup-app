@@ -10,5 +10,5 @@ import UIKit
 import WolmoCore
 
 class NewsListView: UIView, NibLoadable {
-
+    @IBOutlet weak var tableView: UITableView!
 }
