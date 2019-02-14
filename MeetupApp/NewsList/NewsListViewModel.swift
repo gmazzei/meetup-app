@@ -12,7 +12,7 @@ import UIKit
 class NewsListViewModel {
     var news: [News]?
     
-    func fetchNews(tableView: UITableView) {
+    func fetchNews(controller: NewsListViewController){
         guard let url = URL(string: "https://android-training.herokuapp.com/news") else { return }
         URLSession.shared.dataTask(with: url) { data, urlResponse, error in
             guard let data = data, error == nil, urlResponse != nil else{
@@ -22,9 +22,9 @@ class NewsListViewModel {
             do {
                 let decoder = JSONDecoder()
                 self.news = try decoder.decode([News].self, from: data)
-                tableView.reloadData()
+                controller.loadNews()
             } catch {
-                print("error after download")
+                print(error)
             }
         }.resume()
     }

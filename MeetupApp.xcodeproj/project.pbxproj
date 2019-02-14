@@ -23,6 +23,9 @@
 		656B311421FA073B00591F4C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656B311321FA073B00591F4C /* WolmoCore.framework */; };
 		656B311621FA075300591F4C /* WolmoCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 656B311321FA073B00591F4C /* WolmoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		656B311921FA083400591F4C /* UIImageView + load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656B311821FA083400591F4C /* UIImageView + load.swift */; };
+		CAD9AB812215C7A70095606F /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9AB802215C7A70095606F /* NewsDetailViewController.swift */; };
+		CAD9AB832215C8B40095606F /* NewsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD9AB822215C8B40095606F /* NewsDetailView.xib */; };
+		CAD9AB852215CB0D0095606F /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9AB842215CB0D0095606F /* NewsDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +59,9 @@
 		656B310E21FA048300591F4C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		656B311321FA073B00591F4C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
 		656B311821FA083400591F4C /* UIImageView + load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + load.swift"; sourceTree = "<group>"; };
+		CAD9AB802215C7A70095606F /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		CAD9AB822215C8B40095606F /* NewsDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailView.xib; sourceTree = "<group>"; };
+		CAD9AB842215CB0D0095606F /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		656B30F621FA041100591F4C /* MeetupApp */ = {
 			isa = PBXGroup;
 			children = (
+				CAD9AB7F2215C7690095606F /* NewsDetail */,
 				656B310921FA043E00591F4C /* Main */,
 				652F303221FA0B94005E85FA /* NewsList */,
 				656B311721FA081600591F4C /* Extensions */,
@@ -139,6 +146,16 @@
 				656B311821FA083400591F4C /* UIImageView + load.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAD9AB7F2215C7690095606F /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CAD9AB802215C7A70095606F /* NewsDetailViewController.swift */,
+				CAD9AB822215C8B40095606F /* NewsDetailView.xib */,
+				CAD9AB842215CB0D0095606F /* NewsDetailView.swift */,
+			);
+			path = NewsDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +220,7 @@
 				656B30FF21FA041200591F4C /* Assets.xcassets in Resources */,
 				652F303821FA0BD9005E85FA /* NewsListView.xib in Resources */,
 				0325A03C221200AB00EE8376 /* NewsCell.xib in Resources */,
+				CAD9AB832215C8B40095606F /* NewsDetailView.xib in Resources */,
 				656B310D21FA047300591F4C /* MainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,9 +238,11 @@
 				652F303621FA0BC5005E85FA /* NewsListViewModel.swift in Sources */,
 				0325A03A2211FF3F00EE8376 /* News.swift in Sources */,
 				656B310F21FA048300591F4C /* MainView.swift in Sources */,
+				CAD9AB812215C7A70095606F /* NewsDetailViewController.swift in Sources */,
 				656B30F821FA041100591F4C /* AppDelegate.swift in Sources */,
 				652F303421FA0BB1005E85FA /* NewsListViewController.swift in Sources */,
 				656B310B21FA046700591F4C /* MainViewModel.swift in Sources */,
+				CAD9AB852215CB0D0095606F /* NewsDetailView.swift in Sources */,
 				656B311921FA083400591F4C /* UIImageView + load.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

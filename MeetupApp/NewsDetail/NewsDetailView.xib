@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NewsDetailView" customModule="MeetupApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzg-gP-gzN">
+                    <rect key="frame" x="8" y="198" width="359" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lS2-WI-Fip">
+                    <rect key="frame" x="8" y="40" width="359" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="hfR-Kw-Mf5"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lS2-WI-Fip" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="4CX-EH-nx6"/>
+                <constraint firstItem="lS2-WI-Fip" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="HpY-qb-gJ1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lS2-WI-Fip" secondAttribute="trailing" constant="8" id="c06-jo-uII"/>
+                <constraint firstItem="kzg-gP-gzN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="q4H-3e-lzw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kzg-gP-gzN" secondAttribute="trailing" constant="8" id="vqE-Se-AaC"/>
+                <constraint firstItem="kzg-gP-gzN" firstAttribute="top" secondItem="lS2-WI-Fip" secondAttribute="bottom" constant="8" id="y1a-g0-Sl5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="picture" destination="lS2-WI-Fip" id="dML-Q2-nGE"/>
+                <outlet property="text" destination="kzg-gP-gzN" id="42r-mN-bTm"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154.27286356821591"/>
+        </view>
+    </objects>
+</document>

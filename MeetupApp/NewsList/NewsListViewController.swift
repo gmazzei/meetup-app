@@ -30,7 +30,7 @@ class NewsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
-        viewModel.fetchNews(tableView: newsListView.tableView)
+        viewModel.fetchNews(controller: self)
     }
     
     func setupTable() {
@@ -38,6 +38,10 @@ class NewsListViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.delegate = self
         newsListView.tableView.register(UINib(nibName: NewsCell.identifier, bundle: nil), forCellReuseIdentifier: NewsCell.identifier)
+    }
+    
+    func loadNews() {
+        newsListView.tableView.reloadData()
     }
 }
 
@@ -49,8 +53,22 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsCell.identifier, for: indexPath) as! NewsCell
-        cell.title.text = viewModel.news![indexPath.item].title
+        let news = viewModel.news![indexPath.item]
+        cell.title.text = news.title
         
+        do{
+            let url = URL(string: news.picture)
+            try cell.picture.image = UIImage(data: Data(contentsOf: url!))
+        } catch {
+            print(error)
+            return cell
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let news = viewModel.news![indexPath.item]
+        let viewController = NewsDetailViewController(viewModel: news)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

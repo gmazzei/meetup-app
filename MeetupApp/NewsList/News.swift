@@ -11,16 +11,16 @@ import Foundation
 class News: Codable {
     let id: Int
     let userId: Int
-    let createAt: String
+    let createdAt: String
     let title: String
     let picture: String
     let text: String
     let likes: [Int]
     
-    init(id: Int, userId: Int, createAt: String, title: String, picture: String, text: String, likes: [Int]) {
+    init(id: Int, userId: Int, createdAt: String, title: String, picture: String, text: String, likes: [Int]) {
         self.id = id
         self.userId = userId
-        self.createAt = createAt
+        self.createdAt = createdAt
         self.title = title
         self.picture = picture
         self.text = text
